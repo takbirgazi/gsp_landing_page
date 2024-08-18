@@ -6,7 +6,7 @@ function Hero() {
             <div className="text-center">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Transforming Your Vision into Reality</h1>
                 <p className="text-lg md:text-xl lg:text-2xl mb-8">Explore our expert services in Web Development, Topographic Surveying, and RTK Surveying.</p>
-                <a href="#contact" className="bg-white text-blue-600 px-6 py-3 rounded-full text-md md:text-lg font-semibold hover:bg-gray-200">Get Started</a>
+                <a href="https://geosmartplanning.com.bd/contact.php" target="_blank" className="bg-white text-blue-600 px-6 py-3 rounded-full text-md md:text-lg font-semibold hover:bg-gray-200">Contact Us</a>
             </div>
         </header>
     );
