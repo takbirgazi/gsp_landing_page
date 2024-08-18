@@ -7,7 +7,7 @@ import Section from './Components/Section/Section'
 function App() {
 
   return (
-    <div className="font-sans mx-auto">
+    <div className="font-sans mx-auto bg-gray-200">
       <Header />
       <Hero />
       <Section
@@ -45,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

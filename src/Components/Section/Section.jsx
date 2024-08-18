@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 function Section({ id, title, description, cards }) {
     return (
-        <section id={id} className="py-16 bg-white text-center">
-            <div className="container mx-auto px-4">
+        <section id={id} className="py-16 text-center">
+            <div className="container px-4 max-w-screen-xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">{title}</h2>
                 <p className="text-base md:text-lg mb-8">{description}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
