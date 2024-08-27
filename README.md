@@ -7,3 +7,4 @@
 **NPM Packages**
 * prop-types
 * flowbite-react
+* axios
