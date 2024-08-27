@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import "./Header.css";
 
 function Header() {
     const [clicked, setClicked] = useState(false);
@@ -26,7 +27,7 @@ function Header() {
                     <span> <FaBars /> </span>
                 </div>
                 {
-                    clicked && <div className={`rounded-bl-md rounded-br-md p-4 absolute right-3 top-16 bg-gray-800 shadow-lg border-t-2 border-gray-900 md:hidden`}>
+                    clicked && <div className="rounded-bl-md rounded-br-md p-4 absolute right-3 top-16 bg-gray-800 shadow-lg border-t-2 border-gray-900 md:hidden addAnimation">
                         <ul className="w-40 flex flex-col gap-2">
                             {links}
                         </ul>

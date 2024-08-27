@@ -1,0 +1,12 @@
+.addAnimation{
+    animation: addMenuAnim 1s;
+}
+
+@keyframes addMenuAnim {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 12px;
+    }    
+}
