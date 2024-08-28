@@ -1,6 +1,9 @@
 .addAnimation{
     animation: addMenuAnim 1s;
 }
+.addAnimationSubMenu{
+     animation: addMenuAnimSub 1s;
+}
 
 @keyframes addMenuAnim {
     from {
@@ -8,5 +11,13 @@
     }
     to {
         right: 12px;
+    }    
+}
+@keyframes addMenuAnimSub {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }    
 }

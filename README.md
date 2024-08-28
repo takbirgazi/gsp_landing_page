@@ -8,3 +8,4 @@
 * prop-types
 * flowbite-react
 * axios
+* react-helmet-async
