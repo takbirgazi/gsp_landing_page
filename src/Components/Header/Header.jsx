@@ -9,16 +9,41 @@ function Header() {
         {
             id: 1,
             name: "Web Development",
-            subMenu: ["Project 1", "Project 2"]
+            subMenu: [
+                {
+                    id: 1,
+                    name: "Project 1",
+                    link: "project"
+                },
+                {
+                    id: 2,
+                    name: "Project 2",
+                }
+            ]
         },
         {
             id: 2,
             name: "Survey",
-            subMenu: ["Topographic Survey", "RTK Survey", "Drone Survey"]
+            subMenu: [
+                {
+                    id: 1,
+                    name: "Topographic Survey",
+                    link: "topographicSurvey"
+                },
+                {
+                    id: 2,
+                    name: "RTK Survey",
+                },
+                {
+                    id: 3,
+                    name: "Drone Survey",
+                }
+            ]
         },
         {
             id: 3,
             name: "Contact",
+            link: "contact"
         }
     ];
 
@@ -37,13 +62,13 @@ function Header() {
                 <div className="hidden md:flex justify-end w-0 md:w-4/6">
                     <ul className="flex justify-between items-center gap-4">
                         {
-                            navLinks.map((links, ind) => <li key={ind}>
-                                <div onClick={handlerSubClick} className="hover:underline cursor-pointer">{links.name}</div>
+                            navLinks.map(links => <li key={links.id}>
+                                <NavLink to={(links?.link) ? links?.link : "#"} onClick={handlerSubClick} className="hover:underline cursor-pointer">{links.name}</NavLink>
                                 {
                                     links?.subMenu && <div className={`absolute m-5 hidden addAnimationSubMenu`}>
                                         <ul className={`w-40 flex flex-col gap-2 bg-gray-800 shadow-lg border-t-2 border-gray-900 relative rounded-bl-md rounded-br-md p-2`}>
                                             {
-                                                links?.subMenu.map((subLink, ind) => <li key={ind} className="hover:underline cursor-pointer">{subLink}</li>)
+                                                links?.subMenu.map(subLink => <li key={subLink.id} className="hover:underline cursor-pointer"><NavLink to={(subLink.link) ? subLink.link : "#"}>{subLink.name}</NavLink></li>)
                                             }
                                         </ul>
                                     </div>
@@ -60,12 +85,12 @@ function Header() {
                         <ul className="w-40 flex flex-col gap-2">
                             {
                                 navLinks.map(links => <li key={links.id}>
-                                    <a href={links.id} className="hover:underline">{links.name}</a>
+                                    <NavLink to={(links?.link) ? links?.link : "#"} className="hover:underline">{links.name}</NavLink>
                                     {
                                         links?.subMenu && <div className="ml-3">
                                             {
-                                                links?.subMenu.map((subLink, ind) => <div key={ind}>
-                                                    <a href="#" className="hover:underline">{subLink}</a>
+                                                links?.subMenu.map(subLink => <div key={subLink.id}>
+                                                    <NavLink to={(subLink?.link) ? subLink?.link : "#"} className="hover:underline">{subLink.name}</NavLink>
                                                 </div>)
                                             }
                                         </div>
