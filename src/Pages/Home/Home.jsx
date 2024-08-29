@@ -3,6 +3,7 @@ import Hero from "./../../Components/Hero/Hero";
 import Heading from "./../../Components/Heading/Heading";
 import Projects from "./../../Components/Projects/Projects";
 import { NavLink } from "react-router-dom";
+import Clients from "../../Components/Clients/Clients";
 
 
 const Home = () => {
@@ -23,6 +24,10 @@ const Home = () => {
                     <div className="flex items-center justify-center my-5">
                         <NavLink to="/" className="px-6 py-2 rounded-md bg-gray-800 font-semibold font-sans text-gray-200" >View All Project</NavLink>
                     </div>
+                </div>
+                <Heading HeadingText="Client" />
+                <div className="p-5">
+                    <Clients />
                 </div>
             </div>
         </div>
