@@ -12,12 +12,11 @@ function Header() {
             subMenu: [
                 {
                     id: 1,
-                    name: "Project 1",
-                    link: "project"
+                    name: "Front End Web Development",
                 },
                 {
                     id: 2,
-                    name: "Project 2",
+                    name: "Full Stack Web Development",
                 }
             ]
         },
@@ -33,10 +32,12 @@ function Header() {
                 {
                     id: 2,
                     name: "RTK Survey",
+                    link: "rtkSurvey"
                 },
                 {
                     id: 3,
                     name: "Drone Survey",
+                    link: "droneSurvey"
                 }
             ]
         },
