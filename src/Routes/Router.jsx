@@ -14,23 +14,23 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: "/",
+                path: "/service",
                 element: <Home />
             },
             {
-                path: "/contact",
+                path: "/service/contact",
                 element: <Contact />
             },
             {
-                path: "/topographicSurvey",
+                path: "/service/topographicSurvey",
                 element: <TopographicSurvey />
             },
             {
-                path: "/rtkSurvey",
+                path: "/service/rtkSurvey",
                 element: <RtkSurvey />
             },
             {
-                path: "/droneSurvey",
+                path: "/service/droneSurvey",
                 element: <DroneSurvey />
             },
         ]

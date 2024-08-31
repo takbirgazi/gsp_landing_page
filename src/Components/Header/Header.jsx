@@ -27,24 +27,24 @@ function Header() {
                 {
                     id: 1,
                     name: "Topographic Survey",
-                    link: "topographicSurvey"
+                    link: "/service/topographicSurvey"
                 },
                 {
                     id: 2,
                     name: "RTK Survey",
-                    link: "rtkSurvey"
+                    link: "/service/rtkSurvey"
                 },
                 {
                     id: 3,
                     name: "Drone Survey",
-                    link: "droneSurvey"
+                    link: "/service/droneSurvey"
                 }
             ]
         },
         {
             id: 3,
             name: "Contact",
-            link: "contact"
+            link: "/service/contact"
         }
     ];
 
@@ -59,7 +59,7 @@ function Header() {
     return (
         <nav className="bg-gray-800 text-white py-4 fixed w-full z-20 shadow-sm">
             <div className="container flex justify-between items-center px-4 max-w-screen-xl mx-auto">
-                <NavLink to="/" className="text-2xl font-bold w-full md:w-2/6">Geo Smart Planning</NavLink>
+                <NavLink to="/service/" className="text-2xl font-bold w-full md:w-2/6">Geo Smart Planning</NavLink>
                 <div className="hidden md:flex justify-end w-0 md:w-4/6">
                     <ul className="flex justify-between items-center gap-4">
                         {
