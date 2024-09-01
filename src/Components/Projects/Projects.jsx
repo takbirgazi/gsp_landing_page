@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 
 import project1 from "../../assets/projects/project1.png";
+import rtkSurvey from "../../assets/images/sliderImage-1.jpg";
 
 const Projects = () => {
     const projectList = [
@@ -22,7 +23,7 @@ const Projects = () => {
             id: 3,
             name: `RTK Survey`,
             pathUrl: `/service/rtkSurvey`,
-            projectImage: project1,
+            projectImage: rtkSurvey,
             projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
         }
     ]

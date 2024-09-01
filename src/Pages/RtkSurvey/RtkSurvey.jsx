@@ -1,8 +1,8 @@
 
 import { Helmet } from "react-helmet-async";
-import project1 from "./../../assets/projects/project1.png";
 import ProjectCard from "./../../Components/Projects/ProjectCard";
 import Heading from "./../../Components/Heading/Heading";
+import project1 from "./../../assets/images/sliderImage-1.jpg";
 
 const RtkSurvey = () => {
 
