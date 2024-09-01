@@ -9,25 +9,25 @@ const DroneSurvey = () => {
     const projectList = [
         {
             id: 1,
-            name: "Project 1",
+            name: `Drone Survey`,
             pathUrl: `/service/droneSurvey/1`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
+            projDesc: `At Geo Smart Planning, our drone survey services leverage the latest drone technology to deliver high-resolution, accurate aerial data for various applications. Using advanced drones equipped with high-quality cameras and sensors, we capture detailed imagery and topographic data from above, offering a comprehensive view of your project area. Our drone surveys provide rapid data collection, enhanced accuracy, and the ability to access hard-to-reach locations, making them ideal for applications such as land mapping, construction site monitoring, and environmental assessments. With our expertise and cutting-edge technology, we ensure that you receive precise and actionable insights to support your project’s success. Contact Geo Smart Planning to discover how our drone survey services can elevate your data collection and project planning.`
         },
         {
             id: 2,
-            name: "Project 2",
+            name: `Drone Survey 2`,
             pathUrl: `/service/droneSurvey/2`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
+            projDesc: `At Geo Smart Planning, our drone survey services leverage the latest drone technology to deliver high-resolution, accurate aerial data for various applications. Using advanced drones equipped with high-quality cameras and sensors, we capture detailed imagery and topographic data from above, offering a comprehensive view of your project area. Our drone surveys provide rapid data collection, enhanced accuracy, and the ability to access hard-to-reach locations, making them ideal for applications such as land mapping, construction site monitoring, and environmental assessments. With our expertise and cutting-edge technology, we ensure that you receive precise and actionable insights to support your project’s success. Contact Geo Smart Planning to discover how our drone survey services can elevate your data collection and project planning.`
         },
         {
             id: 3,
-            name: "Project 3",
+            name: `Drone Survey 3`,
             pathUrl: `/service/droneSurvey/3`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Projectg.This is Short desc of Project.This is Short desc of Project This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project."
-        }
+            projDesc: `At Geo Smart Planning, our drone survey services leverage the latest drone technology to deliver high-resolution, accurate aerial data for various applications. Using advanced drones equipped with high-quality cameras and sensors, we capture detailed imagery and topographic data from above, offering a comprehensive view of your project area. Our drone surveys provide rapid data collection, enhanced accuracy, and the ability to access hard-to-reach locations, making them ideal for applications such as land mapping, construction site monitoring, and environmental assessments. With our expertise and cutting-edge technology, we ensure that you receive precise and actionable insights to support your project’s success. Contact Geo Smart Planning to discover how our drone survey services can elevate your data collection and project planning.`
+        },
     ]
 
     return (

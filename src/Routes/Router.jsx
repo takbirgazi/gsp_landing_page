@@ -6,6 +6,7 @@ import Contact from "./../Pages/Contact/Contact";
 import TopographicSurvey from "./../Pages/TopographicSurvey/TopographicSurvey";
 import RtkSurvey from "./../Pages/RtkSurvey/RtkSurvey";
 import DroneSurvey from "./../Pages/DroneSurvey/DroneSurvey";
+import SingleProject from "../Pages/SingleProject/SingleProject";
 
 const router = createBrowserRouter([
     {
@@ -34,8 +35,16 @@ const router = createBrowserRouter([
                 element: <DroneSurvey />
             },
             {
+                path: "/service/topographicSurvey/:id",
+                element: <SingleProject />
+            },
+            {
+                path: "/service/rtkSurvey/:id",
+                element: <SingleProject />
+            },
+            {
                 path: "/service/droneSurvey/:id",
-                element: <div>Single Project</div>
+                element: <SingleProject />
             },
         ]
     }

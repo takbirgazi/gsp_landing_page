@@ -16,7 +16,7 @@ const Home = () => {
             <div className="max-w-screen-xl mx-auto mt-20">
                 <Heading HeadingText="About" />
                 <div className="p-5 mb-10 text-center">
-                    <p className="text-lg ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel repellat dolores provident quis aspernatur a dignissimos quia quod eligendi? Nisi fugiat cum dolorum sint modi voluptatem explicabo quas cumque fuga, quia necessitatibus. Praesentium harum eius qui iusto temporibus unde dolore perspiciatis facere. Delectus ea excepturi doloribus sapiente soluta eius doloremque.</p>
+                    <p className="text-lg ">Geo Smart Planning is dedicated to providing innovative and precise geospatial solutions tailored to your needs. Specializing in topographic surveys, RTK surveying, drone surveys, and web development, our team combines cutting-edge technology with expert knowledge to deliver accurate data, insightful analyses, and effective digital solutions. We are committed to excellence, efficiency, and customer satisfaction, ensuring that every project, from detailed land surveys to sophisticated web development, is executed with the highest standards of quality. Partner with Geo Smart Planning to experience how our comprehensive services can drive success and bring your vision to life.</p>
                 </div>
                 <Heading HeadingText="Projects" />
                 <div className="p-5">

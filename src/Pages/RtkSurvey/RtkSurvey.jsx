@@ -9,25 +9,25 @@ const RtkSurvey = () => {
     const projectList = [
         {
             id: 1,
-            name: "Project 1",
-            pathUrl: "/service/rtkSurvey/1",
+            name: `RTK Survey`,
+            pathUrl: `/service/rtkSurvey/1`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
+            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
         },
         {
             id: 2,
-            name: "Project 2",
-            pathUrl: "/service/rtkSurvey/2",
+            name: `RTK Survey 2`,
+            pathUrl: `/service/rtkSurvey/2`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
+            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
         },
         {
             id: 3,
-            name: "Project 3",
-            pathUrl: "/service/rtkSurvey/3",
+            name: `RTK Survey 3`,
+            pathUrl: `/service/rtkSurvey/3`,
             projectImage: project1,
-            projDesc: "This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Projectg.This is Short desc of Project.This is Short desc of Project This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project."
-        }
+            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
+        },
     ]
 
     return (
