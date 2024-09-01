@@ -7,18 +7,21 @@ const Projects = () => {
         {
             id: 1,
             name: "Project 1",
+            pathUrl: "/service/topographicSurvey",
             projectImage: project1,
             projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
         },
         {
             id: 2,
             name: "Project 2",
+            pathUrl: "/service/droneSurvey",
             projectImage: project1,
             projDesc: "This is Short desc of Project of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Sho"
         },
         {
             id: 3,
             name: "Project 3",
+            pathUrl: "/service/rtkSurvey",
             projectImage: project1,
             projDesc: "This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Projectg.This is Short desc of Project.This is Short desc of Project This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project.This is Short desc of Project."
         }

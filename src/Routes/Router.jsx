@@ -33,6 +33,10 @@ const router = createBrowserRouter([
                 path: "/service/droneSurvey",
                 element: <DroneSurvey />
             },
+            {
+                path: "/service/droneSurvey/:id",
+                element: <div>Single Project</div>
+            },
         ]
     }
 ])
