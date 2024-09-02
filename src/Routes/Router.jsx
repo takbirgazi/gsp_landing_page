@@ -7,10 +7,18 @@ import TopographicSurvey from "./../Pages/TopographicSurvey/TopographicSurvey";
 import RtkSurvey from "./../Pages/RtkSurvey/RtkSurvey";
 import DroneSurvey from "./../Pages/DroneSurvey/DroneSurvey";
 import SingleProject from "../Pages/SingleProject/SingleProject";
+import AdminHome from "./../Pages/Dashboard/AdminHome/AdminHome";
+import AddProject from './../Pages/Dashboard/AddProject/AddProject';
+import AdminDashboard from './../Layout/AdminDashboard';
 
 const router = createBrowserRouter([
     {
         path: "/",
+        errorElement: <ErrorPage />,
+        element: <ErrorPage />
+    },
+    {
+        path: "/service",
         errorElement: <ErrorPage />,
         element: <App />,
         children: [
@@ -19,34 +27,50 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/service/contact",
+                path: "contact",
                 element: <Contact />
             },
             {
-                path: "/service/topographicSurvey",
+                path: "topographicSurvey",
                 element: <TopographicSurvey />
             },
             {
-                path: "/service/rtkSurvey",
+                path: "rtkSurvey",
                 element: <RtkSurvey />
             },
             {
-                path: "/service/droneSurvey",
+                path: "droneSurvey",
                 element: <DroneSurvey />
             },
             {
-                path: "/service/topographicSurvey/:id",
+                path: "topographicSurvey/:id",
                 element: <SingleProject />
             },
             {
-                path: "/service/rtkSurvey/:id",
+                path: "rtkSurvey/:id",
                 element: <SingleProject />
             },
             {
-                path: "/service/droneSurvey/:id",
+                path: "droneSurvey/:id",
                 element: <SingleProject />
             },
         ]
+    },
+    {
+        path: "/service/dashboard",
+        errorElement: <div>This is Error Page</div>,
+        element: <AdminDashboard />,
+        children: [
+            {
+                path: "/service/dashboard",
+                element: <AdminHome />
+            },
+            {
+                path: "addProject",
+                element: <AddProject />
+            },
+        ]
+
     }
 ])
 
