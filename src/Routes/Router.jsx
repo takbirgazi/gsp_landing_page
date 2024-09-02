@@ -10,6 +10,7 @@ import SingleProject from "../Pages/SingleProject/SingleProject";
 import AdminHome from "./../Pages/Dashboard/AdminHome/AdminHome";
 import AddProject from './../Pages/Dashboard/AddProject/AddProject';
 import AdminDashboard from './../Layout/AdminDashboard';
+import Login from "../Pages/Dashboard/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -58,7 +59,6 @@ const router = createBrowserRouter([
     },
     {
         path: "/service/dashboard",
-        errorElement: <div>This is Error Page</div>,
         element: <AdminDashboard />,
         children: [
             {
@@ -69,6 +69,10 @@ const router = createBrowserRouter([
                 path: "addProject",
                 element: <AddProject />
             },
+            {
+                path: "login",
+                element: <Login />
+            }
         ]
 
     }
