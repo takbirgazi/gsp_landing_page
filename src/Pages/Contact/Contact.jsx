@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import contact from "./../../assets/images/contactUs.png";
+import { FaTelegramPlane } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -32,7 +33,7 @@ const Contact = () => {
                                         <textarea name="message" className='border rounded-md p-2 bg-transparent outline-0' rows="5" placeholder='Write your message...'></textarea>
                                     </div>
                                     <div>
-                                        <input className='border border-gray-500 rounded-md py-2 px-4 outline-none cursor-pointer bg-gray-700 text-gray-100 font-semibold' name='send' type="submit" value="Send" />
+                                        <button className='border border-gray-500 rounded-md py-2 px-3 outline-none cursor-pointer bg-gray-700 text-gray-100 font-semibold flex gap-1 items-center'><FaTelegramPlane /> Send</button>
                                     </div>
                                 </form>
                             </div>

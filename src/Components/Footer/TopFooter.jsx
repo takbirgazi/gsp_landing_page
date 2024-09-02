@@ -1,10 +1,11 @@
+import { FaTelegramPlane } from "react-icons/fa";
 import Maps from "../Maps/Maps";
 
 const TopFooter = () => {
     return (
-        <div className="bg-gray-400">
+        <div className="bg-gray-300">
             <div className="max-w-screen-xl mx-auto">
-                <h2 className="text-gray-200 text-3xl font-bold py-3 text-center" >Contact</h2>
+                <h2 className="text-gray-800 text-3xl font-bold py-3 text-center" >Contact</h2>
                 <div className="flex flex-col md:flex-row gap-5 justify-between items-center p-5">
                     <div className="w-full md:w-1/2">
                         <Maps />
@@ -25,7 +26,7 @@ const TopFooter = () => {
                                     <textarea name="message" className='border border-gray-900 rounded-md p-2 bg-transparent outline-0' rows="5" placeholder='Write your message...'></textarea>
                                 </div>
                                 <div>
-                                    <input className='border border-gray-500 rounded-md py-2 px-4 outline-none cursor-pointer bg-gray-700 text-gray-100 font-semibold' name='send' type="submit" value="Send" />
+                                    <button className='border border-gray-500 rounded-md py-2 px-3 outline-none cursor-pointer bg-gray-700 text-gray-100 font-semibold flex gap-1 items-center'><FaTelegramPlane /> Send</button>
                                 </div>
                             </form>
                         </div>
