@@ -12,4 +12,4 @@
 * react-icons
 
 **Change Directory I am using service you can remove under components**
-*hostname:port/service/*
+* hostname:port/service/
