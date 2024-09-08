@@ -1,7 +1,30 @@
 import { FaTelegramPlane } from "react-icons/fa";
 import Maps from "../Maps/Maps";
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const TopFooter = () => {
+    const form = useRef();
+    const [successMsg, setSuccessMsg] = useState(false)
+
+    const handlerEmail = (event) => {
+        event.preventDefault();
+        setSuccessMsg(false);
+        emailjs
+            .sendForm('service_8isumkm', 'template_m5i58vq', form.current, {
+                publicKey: 'HIsn8kKKD_nMlxF11',
+            })
+            .then(
+                () => {
+                    setSuccessMsg(true);
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    }
+
     return (
         <div className="bg-gray-300">
             <div className="max-w-screen-xl mx-auto">
@@ -12,14 +35,15 @@ const TopFooter = () => {
                     </div>
                     <div className="w-full md:w-1/2 border rounded border-gray-500">
                         <div className="p-5">
-                            <form className='flex flex-col md:gap-3 gap-1' action="">
+                            <div className='text-green-600'>{successMsg && "Message Send Successfully!"}</div>
+                            <form ref={form} onSubmit={handlerEmail} className='flex flex-col md:gap-3 gap-1' action="">
                                 <div className='flex flex-col md:gap-1'>
                                     <label htmlFor="FullName">Name:</label>
-                                    <input className='border border-gray-900 rounded-md p-2 bg-transparent outline-none' name='fullName' type="text" placeholder='Write your full name' />
+                                    <input className='border border-gray-900 rounded-md p-2 bg-transparent outline-none' name='from_name' type="text" placeholder='Write your full name' />
                                 </div>
                                 <div className='flex flex-col md:gap-1'>
                                     <label htmlFor="email">Email:</label>
-                                    <input className='border border-gray-900 rounded-md p-2 bg-transparent outline-none' name='email' type="email" placeholder='Write your email' />
+                                    <input className='border border-gray-900 rounded-md p-2 bg-transparent outline-none' name='reply_to' type="email" placeholder='Write your email' />
                                 </div>
                                 <div className='flex flex-col md:gap-1'>
                                     <label htmlFor="message">Message:</label>
