@@ -18,6 +18,7 @@ const Contact = () => {
             .then(
                 () => {
                     setSuccessMsg(true);
+                    event.target.reset();
                     console.log('SUCCESS!');
                 },
                 (error) => {
@@ -47,15 +48,15 @@ const Contact = () => {
                                 <form ref={form} onSubmit={handlerEmail} className='flex flex-col md:gap-3 gap-1' action="">
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="FullName">Name:</label>
-                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='from_name' type="text" placeholder='Write your full name' />
+                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='from_name' type="text" placeholder='Write your full name' required />
                                     </div>
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="email">Email:</label>
-                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='reply_to' type="email" placeholder='Write your email' />
+                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='reply_to' type="email" placeholder='Write your email' required />
                                     </div>
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="message">Message:</label>
-                                        <textarea name="message" className='border rounded-md p-2 bg-transparent outline-0' rows="5" placeholder='Write your message...'></textarea>
+                                        <textarea name="message" className='border rounded-md p-2 bg-transparent outline-0' rows="5" placeholder='Write your message...' required></textarea>
                                     </div>
                                     <div>
                                         <button className='border border-gray-500 rounded-md py-2 px-3 outline-none cursor-pointer bg-gray-700 text-gray-100 font-semibold flex gap-1 items-center'><FaTelegramPlane /> Send</button>
