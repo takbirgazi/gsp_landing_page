@@ -1,9 +1,33 @@
 import { Helmet } from 'react-helmet-async';
 import contact from "./../../assets/images/contactUs.png";
 import { FaTelegramPlane } from 'react-icons/fa';
-
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+    const [successMsg, setSuccessMsg] = useState(false)
+
+    const handlerEmail = (event) => {
+        event.preventDefault();
+        setSuccessMsg(false);
+        emailjs
+            .sendForm('service_8isumkm', 'template_m5i58vq', form.current, {
+                publicKey: 'HIsn8kKKD_nMlxF11',
+            })
+            .then(
+                () => {
+                    setSuccessMsg(true);
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    }
+
+
+
     return (
         <div className='max-w-screen-xl mx-auto pt-20'>
             <Helmet>
@@ -19,14 +43,15 @@ const Contact = () => {
                         <div className='md:p-5 w-full md:w-1/2'>
                             <h2 className='font-bold text-3xl md:pb-5 md:flex hidden'>Contact Us</h2>
                             <div>
-                                <form className='flex flex-col md:gap-3 gap-1' action="">
+                                <div className='text-green-600'>{successMsg && "Message Send Successfully!"}</div>
+                                <form ref={form} onSubmit={handlerEmail} className='flex flex-col md:gap-3 gap-1' action="">
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="FullName">Name:</label>
-                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='fullName' type="text" placeholder='Write your full name' />
+                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='from_name' type="text" placeholder='Write your full name' />
                                     </div>
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="email">Email:</label>
-                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='email' type="email" placeholder='Write your email' />
+                                        <input className='border rounded-md p-2 bg-transparent outline-none' name='reply_to' type="email" placeholder='Write your email' />
                                     </div>
                                     <div className='flex flex-col md:gap-1'>
                                         <label htmlFor="message">Message:</label>

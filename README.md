@@ -10,6 +10,7 @@
 * axios
 * react-helmet-async
 * react-icons
+* emailjs/browser
 
 **Change Directory I am using service you can remove under components**
 * hostname:port/service/
