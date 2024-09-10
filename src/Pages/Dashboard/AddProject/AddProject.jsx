@@ -40,7 +40,7 @@ const AddProject = () => {
         const projName = from.projectName.value;
         const projDsc = from.projectDesc.value;
         const projCat = from.projectCat.value;
-        await axios.post('https://api.geosmartplanning.com.bd/api3/upload', image)
+        await axios.post(import.meta.env.VITE_image_upload_api, image)
             .then(async res => {
                 const projData = { projectName: projName, projectDescription: projDsc, projectCategory: projCat, projectImage: res.data }
                 await axios.post(`${import.meta.env.VITE_base_url_api}/addprojects`, projData)
