@@ -43,7 +43,7 @@ const AddProject = () => {
         await axios.post('https://api.geosmartplanning.com.bd/api3/upload', image)
             .then(async res => {
                 const projData = { projectName: projName, projectDescription: projDsc, projectCategory: projCat, projectImage: res.data }
-                await axios.post(`${process.env.REACT_BASE_API}/addprojects`, projData)
+                await axios.post(`${import.meta.env.VITE_base_url_api}/addprojects`, projData)
                     .then(res => {
                         from.reset();
                         setSuccessData("Project Inserted Successfully!");
