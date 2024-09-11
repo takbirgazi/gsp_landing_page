@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "./../../Components/Hero/Hero";
 import Heading from "./../../Components/Heading/Heading";
-import Projects from "./../../Components/Projects/Projects";
 import { NavLink } from "react-router-dom";
 import Clients from "../../Components/Clients/Clients";
+import ProjectsHome from "../../Components/ProjectHome/ProjectsHome";
 
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
                 </div>
                 <Heading HeadingText="Projects" />
                 <div className="p-5">
-                    <Projects></Projects>
+                    <ProjectsHome />
                     <div className="flex items-center justify-center my-5">
                         <NavLink to="/service/" className="px-6 py-2 rounded-md bg-gray-800 font-semibold font-sans text-gray-200" >View All Project</NavLink>
                     </div>

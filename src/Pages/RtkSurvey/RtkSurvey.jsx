@@ -1,10 +1,9 @@
-
 import { Helmet } from "react-helmet-async";
-import ProjectCard from "./../../Components/Projects/ProjectCard";
 import Heading from "./../../Components/Heading/Heading";
 import axios from "axios";
 import { useState } from "react";
 import { BeatLoader } from "react-spinners";
+import ProjectsCard from "../../Components/ProjectsCard/ProjectsCard";
 
 const RtkSurvey = () => {
     const [projectList, setProjectList] = useState([]);
@@ -28,7 +27,7 @@ const RtkSurvey = () => {
                             <div><BeatLoader /></div>
                         </div> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                             {
-                                projectList.map(card => <ProjectCard key={card._id} cardInfo={card} />)
+                                projectList.map(card => <ProjectsCard key={card._id} cardInfo={card} />)
                             }
                         </div>
                     }

@@ -1,9 +1,8 @@
-import ProjectCard from "./ProjectCard";
-
 import project1 from "../../assets/projects/project1.png";
 import rtkSurvey from "../../assets/images/sliderImage-1.jpg";
+import ProjectCardHome from "./ProjectCardHome";
 
-const Projects = () => {
+const ProjectsHome = () => {
     const projectList = [
         {
             _id: 1,
@@ -30,10 +29,10 @@ const Projects = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                projectList.map(card => <ProjectCard key={card._id} cardInfo={card} />)
+                projectList.map(card => <ProjectCardHome key={card._id} cardInfo={card} />)
             }
         </div>
     );
 };
 
-export default Projects;
+export default ProjectsHome;
