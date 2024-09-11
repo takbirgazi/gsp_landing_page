@@ -15,8 +15,8 @@
 * axios
 * react-helmet-async
 * react-icons
-* emailjs/browser
-* (react-spinners)[https://www.davidhu.io/react-spinners]
+* [emailjs/browser](https://www.npmjs.com/package/@emailjs/browser)
+* [react-spinners](https://www.davidhu.io/react-spinners)
 
 **Change Directory I am using service you can remove under components**
 * hostname:port/service/
