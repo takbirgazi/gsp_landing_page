@@ -16,7 +16,7 @@
 * react-helmet-async
 * react-icons
 * emailjs/browser
-* react-spinners
+* (react-spinners)[https://www.davidhu.io/react-spinners]
 
 **Change Directory I am using service you can remove under components**
 * hostname:port/service/
