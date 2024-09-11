@@ -2,33 +2,18 @@
 import { Helmet } from "react-helmet-async";
 import ProjectCard from "./../../Components/Projects/ProjectCard";
 import Heading from "./../../Components/Heading/Heading";
-import project1 from "./../../assets/images/sliderImage-1.jpg";
+import axios from "axios";
+import { useState } from "react";
+import { BeatLoader } from "react-spinners";
 
 const RtkSurvey = () => {
-
-    const projectList = [
-        {
-            id: 1,
-            name: `RTK Survey`,
-            pathUrl: `/service/rtkSurvey/1`,
-            projectImage: project1,
-            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
-        },
-        {
-            id: 2,
-            name: `RTK Survey 2`,
-            pathUrl: `/service/rtkSurvey/2`,
-            projectImage: project1,
-            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
-        },
-        {
-            id: 3,
-            name: `RTK Survey 3`,
-            pathUrl: `/service/rtkSurvey/3`,
-            projectImage: project1,
-            projDesc: `At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.`
-        },
-    ]
+    const [projectList, setProjectList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    axios.get(`${import.meta.env.VITE_base_url_api}/allprojects/RTK Survey`)
+        .then(res => {
+            setProjectList(res.data);
+            setIsLoading(false);
+        })
 
     return (
         <div className='max-w-screen-xl mx-auto pt-20'>
@@ -38,11 +23,15 @@ const RtkSurvey = () => {
             <div className="">
                 <Heading HeadingText="RTK Survey" />
                 <div className="p-3 mb-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {
-                            projectList.map(card => <ProjectCard key={card.id} cardInfo={card} />)
-                        }
-                    </div>
+                    {
+                        isLoading ? <div className="flex items-center justify-center h-96 w-full m-5">
+                            <div><BeatLoader /></div>
+                        </div> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            {
+                                projectList.map(card => <ProjectCard key={card._id} cardInfo={card} />)
+                            }
+                        </div>
+                    }
                 </div>
             </div>
         </div>
