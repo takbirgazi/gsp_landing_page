@@ -1,33 +1,57 @@
 import { Helmet } from "react-helmet-async";
-import { NavLink } from "react-router-dom";
-import rtkSurvey from "../../assets/images/sliderImage-1.jpg";
+import { NavLink, useParams } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import { FadeLoader, ScaleLoader } from "react-spinners";
 
 
 const SingleProject = () => {
+    const [singleProj, setSingleProj] = useState([]);
+    const [catWiseProjects, setCatWiseProjects] = useState([]);
+    const [singleProjLoading, setSingleProjLoading] = useState(true);
+    const [catProjLoading, setCatProjLoading] = useState(true);
+    const params = useParams();
+    const projectId = params.projectId;
+
+    axios.get(`${import.meta.env.VITE_base_url_api}/singleproject/${projectId}`)
+        .then(res => {
+            setSingleProj(res.data);
+            setSingleProjLoading(false);
+            axios.get(`${import.meta.env.VITE_base_url_api}/allprojects/${res.data.projectCategory}`)
+                .then(data => setCatWiseProjects(data.data));
+            setCatProjLoading(false);
+        })
+
     return (
         <div className='max-w-screen-xl mx-auto pt-20'>
             <Helmet>
-                <title>Project -  Geo Smart Planning</title>
+                <title>{`${singleProj.projectCategory} - Geo Smart Planning`}</title>
             </Helmet>
             <div className="flex flex-col md:flex-row gap-5 m-5 ">
-                <aside className="w-full md:w-8/12 border border-gray-500 rounded-md">
-                    <img className="rounded-tl-md rounded-tr-md" src={rtkSurvey} alt="" />
-                    <div className="p-3">
-                        <h2 className="py-2 font-bold text-2xl">Project 1</h2>
-                        <p>At Geo Smart Planning, our RTK (Real-Time Kinematic) survey services deliver exceptional precision with centimeter-level accuracy using advanced satellite-based positioning technology. RTK surveying provides real-time data, enabling immediate feedback and quick adjustments on-site, which is ideal for projects requiring high precision and fast turnaround. By employing state-of-the-art RTK equipment, we ensure reliable and accurate measurements for a wide range of applications, including construction, engineering, and land development. Our efficient process streamlines data collection, helping you achieve precise results promptly. Contact Geo Smart Planning to see how our RTK survey services can enhance your project’s accuracy and efficiency.</p>
-                    </div>
-                </aside>
-                <aside className="w-full md:w-4/12">
-                    <ul className="border border-gray-500 rounded p-2 flex flex-col gap-2">
-                        <li className="p-2 bg-gray-400 text-gray-100 rounded">
-                            <NavLink to="">Project 1</NavLink>
-                        </li>
-                        <li className="p-2 bg-gray-400 text-gray-100 rounded">
-                            <NavLink to="">Project 1</NavLink>
-                        </li>
-
-                    </ul>
-                </aside>
+                {
+                    singleProjLoading ? <div className="w-full md:w-8/12 flex items-center justify-center h-96">
+                        <div><FadeLoader /></div>
+                    </div> : <aside className="w-full md:w-8/12 border border-gray-500 rounded-md">
+                        <img className="rounded-tl-md rounded-tr-md" src={singleProj.projectImage} alt={singleProj.projectName} />
+                        <div className="p-3">
+                            <h2 className="py-2 font-bold text-2xl">{singleProj.projectName}</h2>
+                            <p>{singleProj.projectDescription}</p>
+                        </div>
+                    </aside>
+                }
+                {
+                    catProjLoading ? <div className="w-full md:w-4/12">
+                        <div className="p-2"><ScaleLoader /></div>
+                    </div> : <aside className="w-full md:w-4/12">
+                        <ul className="border border-gray-500 rounded p-2 flex flex-col gap-2">
+                            {
+                                catWiseProjects.map(proj => <li key={proj._id} className="p-2 bg-gray-400 text-gray-100 rounded">
+                                    <NavLink to={`/service/projects/${proj._id}`}>{proj.projectName}</NavLink>
+                                </li>)
+                            }
+                        </ul>
+                    </aside>
+                }
             </div>
         </div>
     );

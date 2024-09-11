@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 
-
 const ProjectsCard = ({ cardInfo }) => {
     const { _id, projectName, projectImage, projectDescription } = cardInfo;
     return (
@@ -11,7 +10,7 @@ const ProjectsCard = ({ cardInfo }) => {
                 <p className="font-semibold py-1">{projectDescription.substring(0, 150)}{(projectDescription.length > 150) && "..."}</p>
             </div>
             <div className="p-4 w-full flex items-center justify-center absolute bottom-0">
-                <NavLink to={_id} className="bg-gray-900 px-5 py-2 rounded-md text-gray-100 font-semibold">View Details</NavLink>
+                <NavLink to={`/service/projects/${_id}`} className="bg-gray-900 px-5 py-2 rounded-md text-gray-100 font-semibold">View Details</NavLink>
             </div>
         </div>
     );

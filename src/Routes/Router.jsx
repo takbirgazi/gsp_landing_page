@@ -11,6 +11,7 @@ import AdminHome from "./../Pages/Dashboard/AdminHome/AdminHome";
 import AddProject from './../Pages/Dashboard/AddProject/AddProject';
 import AdminDashboard from './../Layout/AdminDashboard';
 import Login from "../Pages/Dashboard/Login/Login";
+import AllProjects from "../Pages/AllProjects/AllProjects";
 
 const router = createBrowserRouter([
     {
@@ -44,17 +45,13 @@ const router = createBrowserRouter([
                 element: <DroneSurvey />
             },
             {
-                path: "topographicSurvey/:id",
-                element: <SingleProject />
+                path: "allProjects",
+                element: <AllProjects />
             },
             {
-                path: "rtkSurvey/:id",
+                path: "projects/:projectId",
                 element: <SingleProject />
-            },
-            {
-                path: "droneSurvey/:id",
-                element: <SingleProject />
-            },
+            }
         ]
     },
     {

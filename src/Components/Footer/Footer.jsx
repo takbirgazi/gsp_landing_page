@@ -20,9 +20,9 @@ function Footer() {
                             <h4 className="font-bold text-gray-100 text-2xl md:pb-1 md:mb-3 border-b-2">Service</h4>
                             <ul className="flex flex-col gap-1">
                                 <li className="text-gray-200"><NavLink to="">Web Development</NavLink></li>
-                                <li className="text-gray-200"><NavLink to="">Topographic Survey</NavLink></li>
-                                <li className="text-gray-200"><NavLink to="">RTK Survey</NavLink></li>
-                                <li className="text-gray-200"><NavLink to="">Drone Survey</NavLink></li>
+                                <li className="text-gray-200"><NavLink to="/service/topographicSurvey">Topographic Survey</NavLink></li>
+                                <li className="text-gray-200"><NavLink to="/service/rtkSurvey">RTK Survey</NavLink></li>
+                                <li className="text-gray-200"><NavLink to="/service/droneSurvey">Drone Survey</NavLink></li>
                             </ul>
                         </div>
                     </div>

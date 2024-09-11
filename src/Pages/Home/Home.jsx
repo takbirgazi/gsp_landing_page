@@ -22,7 +22,7 @@ const Home = () => {
                 <div className="p-5">
                     <ProjectsHome />
                     <div className="flex items-center justify-center my-5">
-                        <NavLink to="/service/" className="px-6 py-2 rounded-md bg-gray-800 font-semibold font-sans text-gray-200" >View All Project</NavLink>
+                        <NavLink to="/service/allProjects" className="px-6 py-2 rounded-md bg-gray-800 font-semibold font-sans text-gray-200" >View All Project</NavLink>
                     </div>
                 </div>
                 <Heading HeadingText="Client" />
