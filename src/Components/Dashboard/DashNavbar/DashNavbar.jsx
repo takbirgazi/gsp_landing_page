@@ -12,7 +12,7 @@ const DashNavbar = () => {
         <div className='bg-gray-800'>
             <div className='max-w-screen-xl mx-auto flex flex-col md:flex-row gap-2 justify-between items-center py-2'>
                 <div>
-                    <h2 className='font-bold text-gray-200 text-2xl'>Geo Smart Planning</h2>
+                    <h2 className='font-bold text-gray-200 text-2xl'><NavLink to="/service/dashboard">Geo Smart Planning</NavLink></h2>
                 </div>
                 <div>
                     <ul className='flex gap-3 items-center'>

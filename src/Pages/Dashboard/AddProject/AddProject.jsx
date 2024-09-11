@@ -42,9 +42,9 @@ const AddProject = () => {
         const projCat = from.projectCat.value;
         await axios.post(import.meta.env.VITE_image_upload_api, image)
             .then(async res => {
-                const projData = { projectName: projName, projectDescription: projDsc, projectCategory: projCat, projectImage: res.data }
+                const projData = { projectName: projName, projectImage: res.data, projectCategory: projCat, projectDescription: projDsc };
                 await axios.post(`${import.meta.env.VITE_base_url_api}/addprojects`, projData)
-                    .then(res => {
+                    .then(() => {
                         from.reset();
                         setSuccessData("Project Inserted Successfully!");
                         setAllowSubmit(false);
@@ -73,7 +73,7 @@ const AddProject = () => {
                                 <select className="border rounded-md p-2" name="projectCat" defaultValue="SelectCategory" onChange={() => setAllowSubmit(true)} required >
                                     <option value="SelectCategory" disabled>Select Your Category</option>
                                     {
-                                        category.map(cat => (<option key={cat.slag} value={cat.slag}>{cat.name}</option>))
+                                        category.map(cat => (<option key={cat.slag} value={cat.name}>{cat.name}</option>))
                                     }
                                 </select>
                             </div>
