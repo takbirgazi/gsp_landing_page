@@ -3,6 +3,15 @@ import { useState } from "react";
 
 
 const AddProject = () => {
+    if (localStorage.getItem("token")) {
+        const token = localStorage.getItem("token");
+        if (token !== "gsptec-takbirgazi-175786") {
+            window.location.href = "/service/dashboard/login";
+        }
+    } else {
+        window.location.href = "/service/dashboard/login";
+    }
+    
     const [allowSubmit, setAllowSubmit] = useState(false);
     const [image, setImage] = useState(null);
     const [successData, setSuccessData] = useState("");
