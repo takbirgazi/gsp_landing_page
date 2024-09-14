@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { FadeLoader, ScaleLoader } from "react-spinners";
@@ -10,6 +10,7 @@ const SingleProject = () => {
     const [catWiseProjects, setCatWiseProjects] = useState([]);
     const [singleProjLoading, setSingleProjLoading] = useState(true);
     const [catProjLoading, setCatProjLoading] = useState(true);
+    const navigate = useNavigate();
     const params = useParams();
     const projectId = params.projectId;
 
@@ -21,6 +22,11 @@ const SingleProject = () => {
                 .then(data => setCatWiseProjects(data.data));
             setCatProjLoading(false);
         })
+
+    const handlerSidebar = async (id) => {
+        setSingleProjLoading(true);
+        await navigate(`/service/projects/${id}`);
+    }
 
     return (
         <div className='max-w-screen-xl mx-auto pt-20'>
@@ -46,7 +52,7 @@ const SingleProject = () => {
                         <ul className="border border-gray-500 rounded p-2 flex flex-col gap-2">
                             {
                                 catWiseProjects.map(proj => <li key={proj._id} className="p-2 bg-gray-400 text-gray-100 rounded">
-                                    <NavLink to={`/service/projects/${proj._id}`}>{proj.projectName}</NavLink>
+                                    <button onClick={() => handlerSidebar(proj._id)}>{proj.projectName}</button>
                                 </li>)
                             }
                         </ul>
