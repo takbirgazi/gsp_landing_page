@@ -4,11 +4,15 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
     const navigate = useNavigate();
     const [logInError, setLoginError] = useState("")
+    // Its not working in cPanel
+    // if (localStorage.getItem("token")) {
+    //     const token = localStorage.getItem("token");
+    //     if (token === "gsptec-takbirgazi-175786") {
+    //         window.location.href = "/service/dashboard";
+    //     }
+    // }
     if (localStorage.getItem("token")) {
-        const token = localStorage.getItem("token");
-        if (token === "gsptec-takbirgazi-175786") {
-            window.location.href = "/service/dashboard";
-        }
+        window.location.href = "/service/dashboard";
     }
     const handlerLogIn = (event) => {
         event.preventDefault();
